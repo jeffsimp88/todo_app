@@ -10,12 +10,10 @@ export const toggleTodo = (id) =>{
         payload: id
     }
 }
-export const addTodo = (todo) =>{
-    return{
+export const addTodo = (input) =>({
         type: ADD_TODO,
-        playload: todo
-    }
-}
+        payload: input  
+})
 export const deleteTodo = (id) =>{
     return{
         type: DELETE_TODO,
