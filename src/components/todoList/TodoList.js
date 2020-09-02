@@ -8,7 +8,12 @@ import TodoItem from '../todoItems/TodoItem'
       <section className="main">
         <ul className="todo-list">
           {props.todos.map((todo) => (
-            <TodoItem key={todo.id} title={todo.title} completed={todo.completed} id={todo.id} />
+            <TodoItem 
+              key={todo.id} 
+              title={todo.title} 
+              completed={todo.completed} 
+              id={todo.id} 
+            />
           ))}
         </ul>
       </section>
@@ -20,4 +25,5 @@ const mapStateToProps = (state) => {
     todos: state.todos
   }
 }
+
 export default connect(mapStateToProps)(TodoList)
